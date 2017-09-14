@@ -50,6 +50,10 @@ a.nav-link:hover {
     padding-right: 0;
 }
 
+.flex-to-column {
+    flex-direction: column;
+}
+
 .full-height {
     display: flex;
     height: 100vh;
@@ -77,23 +81,27 @@ a.nav-link:hover {
 }
 
 li.nav-item {
-    padding: 0 15px;
+    margin: 0 15px;
 }
 
 .section-title {
     margin-top: 15px;
 }
 
-/* section p,
-section .progress {
-    display: flex;
-    align-items: center;
-} */
+.progress-bar {
+    color: black;
+    height: 15px;
+    border-radius: 5px;
+}
 
 section .full-height-with-title {
     align-items: center;
 }
 
-* {
-    outline: 1px red solid;
+.skills .col-lg-6 {
+    min-height: auto;
 }
+
+/* * {
+    outline: 1px red solid;
+} */
