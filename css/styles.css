@@ -1,0 +1,79 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a,
+p {
+    font-family: 'Raleway', sans-serif;
+}
+
+h2 {
+    padding: 15px 0;
+}
+
+a.nav-link {
+    color: white;
+}
+
+a.nav-link:hover {
+    color: rgb(165, 165, 165);
+}
+
+.page-header {
+    background-color: rgba(0, 102, 255, 0.40);
+    height: 100px;
+}
+
+.home-page {
+    background: url("../images/background-photo.jpg") no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.full-height {
+    display: flex;
+    height: calc(100vh - 100px);
+}
+
+.overlay {
+    position: absolute;
+    width: 100vw;
+    margin-left: -30px;
+    background: rgba(0, 102, 255, 0.20);
+}
+
+.navbar,
+.page-header {
+    height: 100px;
+}
+
+.nav-link {
+    font-size: 1.25em;
+    text-transform: uppercase;
+}
+
+li.nav-item {
+    padding: 0 15px;
+}
+
+.section-title {
+    margin-top: 15px;
+}
+
+/* section p,
+section .progress {
+    display: flex;
+    align-items: center;
+} */
+
+section .full-height {
+    align-items: center;
+}
+
+* {
+    outline: 1px red solid;
+}
