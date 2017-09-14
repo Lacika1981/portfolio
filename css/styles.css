@@ -21,9 +21,23 @@ a.nav-link:hover {
     color: rgb(165, 165, 165);
 }
 
+.fix {
+    position: fixed;
+}
+
+.home-page .page-header {
+    background-color: transparent;
+    z-index: 99;
+}
+
 .page-header {
     background-color: rgba(0, 102, 255, 0.40);
     height: 100px;
+}
+
+.page-header.col {
+    padding-left: 0;
+    padding-right: 0;
 }
 
 .home-page {
@@ -32,17 +46,23 @@ a.nav-link:hover {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+    padding-left: 0;
+    padding-right: 0;
 }
 
 .full-height {
+    display: flex;
+    height: 100vh;
+}
+
+.full-height-with-title {
     display: flex;
     height: calc(100vh - 100px);
 }
 
 .overlay {
     position: absolute;
-    width: 100vw;
-    margin-left: -30px;
+    width: 100%;
     background: rgba(0, 102, 255, 0.20);
 }
 
@@ -70,7 +90,7 @@ section .progress {
     align-items: center;
 } */
 
-section .full-height {
+section .full-height-with-title {
     align-items: center;
 }
 
