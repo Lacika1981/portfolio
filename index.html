@@ -18,19 +18,19 @@
     <title>Laszlo Peter Varga Portfolio</title>
 </head>
 
-<body>
+<body data-spy="scroll" data-target="#navbar-example">
     <div class="container-fluid">
         <div class="row">
-
+            <div id="home"></div>
             <div class="col home-page full-height">
                 <header class="page-header fix col">
-                    <nav class="navbar justify-content-end">
+                    <nav class="navbar justify-content-end" id="navbar-example">
                         <ul class="nav">
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Home</a>
+                                <a class="nav-link" href="#home">Home</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">About Me</a>
+                                <a class="nav-link" href="#about-me">About Me</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="#">Education</a>
@@ -45,7 +45,7 @@
                 </div>
             </div>
         </div>
-        <div class="row">
+        <div class="row" id="about-me">
             <div class="page-header col offset-100-vertical">
                 <h2 class="section-title text-center">About Me</h2>
             </div>

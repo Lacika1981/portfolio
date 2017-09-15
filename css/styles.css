@@ -1,3 +1,7 @@
+body {
+    position: relative;
+  }
+
 h1,
 h2,
 h3,
@@ -80,6 +84,10 @@ a.nav-link:hover {
     text-transform: uppercase;
 }
 
+.nav-link.active {
+    border-bottom: 1px solid white;
+}
+
 li.nav-item {
     margin: 0 15px;
 }
@@ -102,9 +110,9 @@ section .full-height-with-title {
     min-height: auto;
 }
 
-* {
+/* * {
     outline: 1px red solid;
-}
+} */
 
 .progress-green {
     background-color: green;
