@@ -102,6 +102,17 @@ section .full-height-with-title {
     min-height: auto;
 }
 
-/* * {
+* {
     outline: 1px red solid;
-} */
+}
+
+.progress-green {
+    background-color: green;
+}
+
+.about-me img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50% !important;
+    object-fit: cover;
+}
