@@ -22,9 +22,9 @@
     <div class="container-fluid">
         <div class="row">
             <div id="home"></div>
-            <div class="col home-page full-height">
-                <header class="page-header fix col">
-                    <nav class="navbar justify-content-end" id="navbar-example">
+            <div class="col home-page d-flex full-height">
+                <header class="page-header fixed-top col">
+                    <nav class="navbar justify-content-end grey-opacity" id="navbar-example">
                         <ul class="nav">
                             <li class="nav-item">
                                 <a class="nav-link" href="#home">Home</a>
@@ -33,7 +33,7 @@
                                 <a class="nav-link" href="#about-me">About Me</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Education</a>
+                                <a class="nav-link" href="#education">Education</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="#">Portfolio</a>
@@ -41,7 +41,7 @@
                         </ul>
                     </nav>
                 </header>
-                <div class="overlay full-height">
+                <div class="overlay d-flex full-height">
                 </div>
             </div>
         </div>
@@ -50,15 +50,23 @@
                 <h2 class="section-title text-center">About Me</h2>
             </div>
         </div>
-        <section class="row">
-            <div class="about-me flex-to-column col-lg-6 full-height-with-title justify-content-center">
+        <section class="row about-me">
+            <div class="about-me flex-column col-lg-6 d-flex full-height-with-title justify-content-center">
                 <h3>Who am I</h3>
                 <img src="images/laszlo-varga.jpg" class="img-thumbnail rounded mx-auto d-block">
-                <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
-                
-                <p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth. Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to</p>
+                <div class="text-width-mid">
+                    <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the
+                        blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language
+                        ocean.
+                    </p>
+
+                    <p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a
+                        paradisematic country, in which roasted parts of sentences fly into your mouth. Even the all-powerful
+                        Pointing has no control about the blind texts it is an almost unorthographic life One day however
+                        a small line of blind text by the name of Lorem Ipsum decided to</p>
+                </div>
             </div>
-            <div class="skills flex-to-column col-lg-6 full-height-with-title justify-content-center">
+            <div class="skills flex-column col-lg-6 d-flex full-height-with-title justify-content-center">
                 <h3>My Skills</h3>
                 <div class="col-lg-6">
                     <span>HTML</span>
@@ -99,6 +107,88 @@
                     </div>
                 </div>
             </div>
+        </section>
+        <div class="row" id="education">
+            <div class="page-header col offset-100-vertical">
+                <h2 class="section-title text-center">Education</h2>
+            </div>
+        </div>
+        <section class="row education">
+            <ul class="timeline">
+                <li>
+                    <div class="timeline-badge"><img src="images/udacity.svg"></div>
+                    <div class="timeline-panel">
+                        <div class="timeline-heading">
+                            <h4 class="timeline-title">Front-End Web Developer Nanodegree Program</h4>
+                            <p><small class="text-muted">May 2017 - Aug 2017</small></p>
+                        </div>
+                        <div class="timeline-body">
+                            <blockquote class="blockquote">
+                                <p>A Nanodegree program is an innovative curriculum path that is outcome-based and career-oriented.
+                                    Every program has a clear end-goal, and the ideal path to get you there. Courses are
+                                    built with industry leaders like Google, AT&T, and Facebook, and are taught by leading
+                                    subject matter experts. Students benefit from personalized mentoring and project-review
+                                    throughout, and have regular access to instructors and course managers through moderated
+                                    forums.
+                                </p>
+                            </blockquote>
+                        </div>
+                    </div>
+                </li>
+                <li class="timeline-inverted">
+                    <div class="timeline-badge"><img src="images/udemy-seeklogo.com.svg"></div>
+                    <div class="timeline-panel">
+                        <div class="timeline-heading">
+                            <h4 class="timeline-title">Advanced JavaScript: A Course for Serious Programmers</h4>
+                            <p><small class="text-muted">Oct 2015</small></p>
+                        </div>
+                        <div class="timeline-body">
+                            <blockquote class="blockquote">
+                                <p>This course will show you how to fully utilize everything that JavaScript has to offer. You'll
+                                    essentially go "under the hood" of this popular programming language, getting to know
+                                    how it works from the inside, so that you can make the most of it for every web development
+                                    project.
+                                </p>
+                            </blockquote>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="timeline-badge"><img src="images/udemy-seeklogo.com.svg"></div>
+                    <div class="timeline-panel">
+                        <div class="timeline-heading">
+                            <h4 class="timeline-title">JavaScript: Understanding the Weird Parts</h4>
+                            <p><small class="text-muted">Sep 2015</small></p>
+                        </div>
+                        <div class="timeline-body">
+                            <blockquote class="blockquote">
+                                <p>In this course you will gain a deep understanding of Javascript, learn how Javascript works
+                                    under the hood, and how that knowledge helps you avoid common pitfalls and drastically
+                                    improve your ability to debug problems. You will find clarity in the parts that others,
+                                    even experienced coders, may find weird, odd, and at times incomprehensible. You'll learn
+                                    the beauty and deceptive power of this language that is at the forefront of modern software
+                                    development today.</p>
+                            </blockquote>
+                        </div>
+                    </div>
+                </li>
+                <li class="timeline-inverted">
+                    <div class="timeline-badge"><img src="images/udemy-seeklogo.com.svg"></div>
+                    <div class="timeline-panel">
+                        <div class="timeline-heading">
+                            <h4 class="timeline-title">Learning Object-Oriented JavaScript</h4>
+                            <p><small class="text-muted">Sep 2015</small></p>
+                        </div>
+                        <div class="timeline-body">
+                            <blockquote class="blockquote">
+                                <p>This course will help you change some common coding practices and empower you by giving you
+                                    the tools you need for more efficient development.
+                                </p>
+                            </blockquote>
+                        </div>
+                    </div>
+                </li>
+            </ul>
         </section>
 
     </div>
