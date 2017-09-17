@@ -13,3 +13,7 @@ $(function () {
 })
 
 $('body').scrollspy({ target: '#navbar-example' })
+
+var test = function(){
+    console.log('hello');
+}
