@@ -274,9 +274,39 @@ section .full-height-with-title {
     margin-top: 15px;
 }
 
-.modal-footer img.glyphicons:hover {
-    color: yellow;
+.card-title {
+    text-align: center;
 }
+
+.card-text {
+    text-align: justify;
+}
+
+.btn-primary {
+    margin: 0 25%;
+}
+
+.octicon {
+    display: inline-block;
+    vertical-align: text-top;
+    fill: currentColor;
+}
+
+svg  {
+    font-size: 2em;
+}
+
+.svg-box:hover {
+    transform: rotateZ(45deg);
+    transform-origin: 50% 50%;
+    transition-duration: 0.5s;
+    color: #00C3FF;
+}
+
+.modal-title {
+    text-shadow: 2px 2px 5px lightsteelblue;
+}
+
 /* * {
     outline: 1px red solid;
 } */
