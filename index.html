@@ -198,18 +198,22 @@
         </div>
         <section class="row portfolio">
             <div class="card-group">
-                <div class="card image" data-content="Project - Build a Portfolio Site">
+                <div class="card image">
                     <img class="card-img-top" src="images/portfolio-project-900.jpg">
                     <div class="card-body">
-                        <h4 class="card-title">Project - Build a Portfolio Site</h4>
+                        <h4 class="card-title">Project - Build a Portfolio</h4>
                         <p class="card-text">Developed a personal portfolio page using HTML, CSS, and the Bootstrap framework. The page is fully
-                            responsive and works on mobile, tablet, and desktop browsers.</p>
+                            responsive and works on mobile, tablet, and desktop browsers."
+                        </p>
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#buildPortfolio">
+                                More information
+                              </button>
                     </div>
                     <div class="card-footer">
                         <small class="text-muted">HTML, CSS, Bootstrap</small>
                     </div>
                 </div>
-                <div class="card image" data-content="Project - Online Resume">
+                <div class="card image">
                     <img class="card-img-top" src="images/resume-project-900.jpg">
                     <div class="card-body">
                         <h4 class="card-title">Project - Online Resume</h4>
@@ -269,6 +273,27 @@
                 </div>
             </div>
         </section>
+
+        <!-- Modal -->
+        <div class="modal fade" id="buildPortfolio" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header justify-content-center">
+                        <h5 class="modal-title" id="exampleModalLongTitle">Build a Portfolio</h5>
+                    </div>
+                    <div class="modal-body">
+                        Developed a personal portfolio page using HTML, CSS, and the Bootstrap framework. The page is fully responsive and works
+                        on mobile, tablet, and desktop browsers.
+                    </div>
+                    <div class="modal-footer justify-content-center">
+                        <img src="images/glyphicons_free/glyphicons/png/glyphicons-198-remove-circle.png" class="glyphicons " data-dismiss="modal">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
     </div>
 </body>
 

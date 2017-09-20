@@ -265,43 +265,17 @@ section .full-height-with-title {
     }
 }
 
+.portfolio a {
+    color: inherit;
+    text-decoration: none;
+}
+
 .card-group {
     margin-top: 15px;
 }
 
-.image {
-    position:relative;
-}
-.image img {
-    width:100%;
-    vertical-align:top;
-}
-.image:after, .image:before {
-    position:absolute;
-    opacity:0;
-    transition: all 0.5s;
-    -webkit-transition: all 0.5s;
-}
-.image:after {
-    content:'\A';
-    width:100%; height:100%;
-    top:0; left:0;
-    background:rgba(0,0,0,0.6);
-}
-.image:before {
-    content: attr(data-content);
-    width:100%;
-    color:#fff;
-    z-index:1;
-    bottom:50%;
-    padding:4px 10px;
-    text-align:center;
-    background:red;
-    box-sizing:border-box;
-    -moz-box-sizing:border-box;
-}
-.image:hover:after, .image:hover:before {
-    opacity:1;
+.modal-footer img.glyphicons:hover {
+    color: yellow;
 }
 /* * {
     outline: 1px red solid;
