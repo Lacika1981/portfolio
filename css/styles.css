@@ -282,10 +282,6 @@ section .full-height-with-title {
     text-align: justify;
 }
 
-.btn-primary {
-    margin: 0 25%;
-}
-
 .octicon {
     display: inline-block;
     vertical-align: text-top;

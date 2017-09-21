@@ -55,7 +55,7 @@ $(function(){
 
 /* https://www.abeautifulsite.net/vertically-centering-bootstrap-modals */
 
-$(function() {
+/* $(function() {
     function reposition() {
         var modal = $(this),
             dialog = modal.find('.modal-dialog');
@@ -71,23 +71,24 @@ $(function() {
     $(window).on('resize', function() {
         $('.modal:visible').each(reposition);
     });
-});
+}); */
 
 
 
 function portfolioCall(){
     $(document).on('click', 'button', function(){
         var d = $(this).attr('data-jsonTarget');
-        console.log(d);
 
         $.ajax({
             url: 'js/portfolio.json',
             dataType: 'json'
         })
         .done(function(response){
-            console.log(response.buildAPortfolio);
-            var x = '<h5 class="modal-title" id="exampleModalLongTitle">%data%</h5>'.replace("%data%", response.buildAPortfolio.title);
-            $('.modal-header').append(x);
+            var responseTitle = '<h5 class="modal-title" id="exampleModalLongTitle">%data%</h5>'.replace("%data%", response[d].title);
+            var responseBody = '<p class="card-text">%data%</p>'.replace("%data%", response[d].body);
+            var responseImage = '<img class="img-fluid" src="%data%">'.replace("%data%", response[d].image);
+            $('.modal-header').empty().append(responseTitle);
+            $('.modal-body').empty().append(responseBody).append(responseImage);
         })
 
     });
