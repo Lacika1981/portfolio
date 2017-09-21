@@ -72,3 +72,23 @@ $(function() {
         $('.modal:visible').each(reposition);
     });
 });
+
+
+
+function portfolioCall(){
+    $(document).on('click', 'button', function(){
+        var d = $(this).attr('data-jsonTarget');
+        console.log(d);
+
+        $.ajax({
+            url: 'js/portfolio.json',
+            dataType: 'json'
+        })
+        .done(function(response){
+            console.log(response.buildAPortfolio);
+            var x = '<h5 class="modal-title" id="exampleModalLongTitle">%data%</h5>'.replace("%data%", response.buildAPortfolio.title);
+            $('.modal-header').append(x);
+        })
+
+    });
+} 

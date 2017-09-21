@@ -300,7 +300,7 @@ svg  {
     transform: rotateZ(45deg);
     transform-origin: 50% 50%;
     transition-duration: 0.5s;
-    color: #00C3FF;
+    color: lightsteelblue;
 }
 
 .modal-title {
