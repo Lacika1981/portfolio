@@ -88,7 +88,13 @@ function portfolioCall(data){
             var responseTitle = '<h5 class="modal-title" id="exampleModalLongTitle">%data%</h5>'.replace("%data%", response[data].title);
             var responseBody = '<p class="card-text">%data%</p>'.replace("%data%", response[data].body);
             var responseImage = '<img class="img-fluid" src="%data%">'.replace("%data%", response[data].image);
+            var responseLink = response[data].linkGitHub;
+            var responseGitHub = '<a href="' + responseLink + '" target="_blank"><img class="img-fluid" src="%data%"></a>'.replace("%data%", response[data].githubImage);
+            var responseLinkInside = response[data].linkInsidePage;
+            var responseLinkInsideImage = '<a href="' + responseLinkInside + '" target="_blank"><img class="img-fluid" src="%data%"></a>'.replace("%data%", response[data].linkInsideImage);
             $('.modal-header').empty().append(responseTitle);
             $('.modal-body').empty().append(responseBody).append(responseImage);
+            $('.gitHubIcon').empty().append(responseGitHub);
+            $('.insideIcon').empty().append(responseLinkInsideImage);
         });
-} 
+}
