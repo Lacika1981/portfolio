@@ -73,23 +73,22 @@ $(function(){
     });
 }); */
 
+$(document).on('click', 'button', function(elem){
+    var clickedElem = elem.target;
+    var clickedAttribute = clickedElem.getAttribute('data-jsonTarget')
+    portfolioCall(clickedAttribute);
+})
 
-
-function portfolioCall(){
-    $(document).on('click', 'button', function(){
-        var d = $(this).attr('data-jsonTarget');
-
+function portfolioCall(data){   
         $.ajax({
             url: 'js/portfolio.json',
             dataType: 'json'
         })
         .done(function(response){
-            var responseTitle = '<h5 class="modal-title" id="exampleModalLongTitle">%data%</h5>'.replace("%data%", response[d].title);
-            var responseBody = '<p class="card-text">%data%</p>'.replace("%data%", response[d].body);
-            var responseImage = '<img class="img-fluid" src="%data%">'.replace("%data%", response[d].image);
+            var responseTitle = '<h5 class="modal-title" id="exampleModalLongTitle">%data%</h5>'.replace("%data%", response[data].title);
+            var responseBody = '<p class="card-text">%data%</p>'.replace("%data%", response[data].body);
+            var responseImage = '<img class="img-fluid" src="%data%">'.replace("%data%", response[data].image);
             $('.modal-header').empty().append(responseTitle);
             $('.modal-body').empty().append(responseBody).append(responseImage);
-        })
-
-    });
+        });
 } 
