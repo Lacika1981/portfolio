@@ -85,6 +85,13 @@ function portfolioCall(data){
             dataType: 'json'
         })
         .done(function(response){
+            var objectPortfolio = response;
+            var keys = Object.keys(objectPortfolio);
+            for (let i = 0; i < keys.length; i++){
+                objectPortfolio[keys[i]].githubImage = "../images/mark-github.svg";
+                objectPortfolio[keys[i]].linkInsideImage = "../images/kebab-horizontal.svg";
+            }
+
             var responseTitle = '<h5 class="modal-title" id="exampleModalLongTitle">%data%</h5>'.replace("%data%", response[data].title);
             var responseBody = '<p class="card-text">%data%</p>'.replace("%data%", response[data].body);
             var responseImage = '<img class="img-fluid" src="%data%">'.replace("%data%", response[data].image);

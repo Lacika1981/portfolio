@@ -3,34 +3,42 @@
         "title": "Project - Build a Portfolio",
         "body": "Developed a personal portfolio page using HTML, CSS, and the Bootstrap framework. The page is fully responsive and works on mobile, tablet, and desktop browsers.",
         "image": "../images/portfolio-project-900.jpg",
-        "githubImage": "../images/mark-github.svg",
         "linkGitHub": "https://github.com/Lacika1981/project-1",
-        "linkInsideImage": "../images/kebab-horizontal.svg",
         "linkInsidePage": "build-a-portfolio.html"
     },
     "resume": {
         "title": "Project - Online Resume",
         "body": "Using jQuery, developed an interactive resume application that reads all data from a JSON file and then dynamically modifies the DOM to display the information. Further customized the project by personalizing the design using CSS.",
-        "image": "../images/resume-project-900.jpg"
+        "image": "../images/resume-project-900.jpg",
+        "linkGitHub": "https://github.com/Lacika1981/project-1",
+        "linkInsidePage": "build-a-portfolio.html"
     },
     "arcadeGame": {
         "title": "Project - Classic Arcade Game Clone",
         "body": "An HTML5 Canvas powered video game, developed using the best practices in Object Oriented JavaScript.",
-        "image": "../images/arcade-game-900.jpg"
+        "image": "../images/arcade-game-900.jpg",
+        "linkGitHub": "https://github.com/Lacika1981/project-1",
+        "linkInsidePage": "build-a-portfolio.html"
     },
     "websiteOptimization" : {
         "title": "Project - Website Optimization",
         "body": "Optimized an inefficient web application's JavaScript, CSS and assets delivery, ensuring it runs at 60fps and achieves a PageSpeed score of at least 90.",
-        "image": "../images/website-optimization-900.jpg"
+        "image": "../images/website-optimization-900.jpg",
+        "linkGitHub": "https://github.com/Lacika1981/project-1",
+        "linkInsidePage": "build-a-portfolio.html"
     },
     "neighborhood" : {
         "title": "Project - Neighborhood Map",
         "body": "A single-page web application, built using the Knockout framework, that displays a Google Map of an area and various points of interest. Users can search all included landmarks and, when selected, additional information about a landmark is presented from the FourSquare and Wikipedia APIs.",
-        "image": "../images/neighborhood-project-900.jpg"
+        "image": "../images/neighborhood-project-900.jpg",
+        "linkGitHub": "https://github.com/Lacika1981/project-1",
+        "linkInsidePage": "build-a-portfolio.html"
     },
     "feedReader" : {
         "title": "Project - Feed Reader Testing",
         "body": "Wrote comprehensive unit tests, using the Jasmine testing framework, for an RSS Feed Reader application that uses Google's RSS API.",
-        "image": "../images/feed-reader-900.jpg"
+        "image": "../images/feed-reader-900.jpg",
+        "linkGitHub": "https://github.com/Lacika1981/project-1",
+        "linkInsidePage": "build-a-portfolio.html"
     }
 }
