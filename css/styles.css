@@ -26,9 +26,8 @@ a.nav-link:hover {
 }
 .page-header {
     background-color: rgba(0, 102, 255, 0.40);
-    height: 100px;
 }
-.page-header.col {
+.page-header.col-6 {
     padding-left: 0;
     padding-right: 0;
 }
