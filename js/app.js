@@ -1,4 +1,4 @@
-$(function () {
+const animatedProgressBar = function (){
     $(".progress div").each(function () {
         let display = $(this),
             nextValue = $(this).attr("aria-valuenow");
@@ -10,13 +10,11 @@ $(function () {
                 width: 'easing'
             });
     });
-});
-
-$('body').scrollspy({ target: '#navbar-example' });
+}
 
 /* https://www.sitepoint.com/scroll-based-animations-jquery-css3/ */
 
-$(function () {
+const animatedDives = function (){
     let $animatedElement = $('li.animated');
     let $window = $(window);
 
@@ -46,15 +44,9 @@ $(function () {
             }
         });
     }
-});
+}
 
-$(document).on('click', 'button', function (elem) {
-    let clickedElem = elem.target;
-    let clickedAttribute = clickedElem.getAttribute('data-jsonTarget');
-    portfolioCall(clickedAttribute);
-});
-
-function portfolioCall(data) {
+const portfolioCall = function(data) {
     $.ajax({
         url: 'js/portfolio.json',
         dataType: 'json'
@@ -81,7 +73,7 @@ function portfolioCall(data) {
         });
 }
 
-$(function(){
+const shortenCardText = function(){
     $('p.card-text').each(function(){ // take card text
         let text = $(this)[0].innerText; // take value of card text
         let textLength = text.length; // length of the text
@@ -96,4 +88,18 @@ $(function(){
             }
         }
     });
+}
+
+$('body').scrollspy({ target: '#navbar-example' });
+
+$(document).on('click', 'button', function (elem) {
+    let clickedElem = elem.target;
+    let clickedAttribute = clickedElem.getAttribute('data-jsonTarget');
+    portfolioCall(clickedAttribute);
+});
+
+$(function(){
+    animatedDives();
+    animatedProgressBar();
+    shortenCardText();
 });
