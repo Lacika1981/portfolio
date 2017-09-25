@@ -33,7 +33,7 @@ a.nav-link:hover {
     padding-right: 0;
 }
 .home-page {
-    background: url("../images/background-photo.jpg") no-repeat center center;
+    background: url("../images/optimized-images/background-photo-lg.jpg") no-repeat center center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;

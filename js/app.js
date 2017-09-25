@@ -14,6 +14,7 @@ const animatedProgressBar = function (){
 
 /* https://www.sitepoint.com/scroll-based-animations-jquery-css3/ */
 
+
 const animatedDives = function (){
     let $animatedElement = $('li.animated');
     let $window = $(window);
