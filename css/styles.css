@@ -293,3 +293,59 @@ section .full-height-with-title {
 /* * {
     outline: 1px red solid;
 } */
+
+@media screen and (max-width: 800px){
+    .navbar {
+        height: 100vh;
+        width: 200px;
+        transform: translateX(-200px);
+        transition-duration: 500ms;
+}
+    .nav {
+        flex-direction: column;
+        text-align: center;
+    }
+    #navbar-example {
+        justify-content: center !important;
+    }
+    .nav-link {
+        font-size: 0.85em;
+        margin: 15px auto;
+    }
+    
+    .menu img {
+        width: 35px;
+        height: 35px;
+        position: fixed;
+        top: 10px;
+        left: 10px;
+        background-color: white;
+        padding: 5px;
+        border-radius: 50%;
+        border: 1px solid black;
+        z-index: 10000;
+        transition-duration: 500ms;
+    }
+    .menuToggle {
+        transform: translateX(200px);
+    }
+    .navbarToggle {
+        transform: translateX(0px);
+    }
+    section {
+        margin: 15px 0;
+    }
+    section.portfolio {
+        margin-bottom: 0;
+    }
+    .about-me,
+    .skills {
+        height: auto;
+    }
+
+    p,
+    span,
+    a {
+        font-size: 0.75em;
+    }
+}

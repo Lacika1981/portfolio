@@ -104,3 +104,17 @@ $(function(){
     animatedProgressBar();
     shortenCardText();
 });
+
+$(function(){
+    $('.menu img').click(function(){
+        $(this).toggleClass('menuToggle');
+        $('.navbar').toggleClass('navbarToggle');
+    });
+});
+
+$(function(){
+    let windowWidth = $(window).width();
+    if (windowWidth <= 800){
+        $('.timeline, .timeline-inverted').removeClass('animated');
+    }
+});
