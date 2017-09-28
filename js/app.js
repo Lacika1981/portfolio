@@ -48,11 +48,11 @@ const animatedDives = function (){
 }
 
 const portfolioCall = function(data) {
-    /* $.ajax({
+    $.ajax({
         url: 'js/portfolio.json',
         dataType: 'json'
-    }) */
-        /* .then */$.getJSON('js/portfolio.json', function (response) {
+    })
+        .done(function (response) {
             let objectPortfolio = response;
             let keys = Object.keys(objectPortfolio);
             for (let i = 0; i < keys.length; i++) {
