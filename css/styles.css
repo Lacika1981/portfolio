@@ -80,13 +80,13 @@ li.nav-item {
     height: 15px;
     border-radius: 5px;
 }
-section .full-height-with-title {
-    align-items: center;
+section .full-height-with-title h3 {
+    text-align:  center;
 }
 .skills .col-lg-6 {
     min-height: auto;
 }
-.progress-green {
+.progress-lg-4-green {
     background-color: green;
 }
 .about-me img {
@@ -269,7 +269,7 @@ section .full-height-with-title {
     text-decoration: none;
 }
 
-.card-group {
+.card {
     margin-top: 15px;
 }
 
