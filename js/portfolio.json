@@ -2,7 +2,7 @@
     "buildAPortfolio": {
         "title": "Project - Build a Portfolio",
         "body": "Developed a personal portfolio page using HTML, CSS, and the Bootstrap framework. The page is fully responsive and works on mobile, tablet, and desktop browsers.",
-        "image": "../images/optimized-images/portfolio-project-lg.webp",
+        "image": "../images/optimized-images/portfolio-project-lg.jpg",
         "linkGitHub": "https://github.com/Lacika1981/project-1",
         "linkInsidePage": "build-a-portfolio.html"
     },
