@@ -52,7 +52,7 @@ const portfolioCall = function(data) {
         url: 'js/portfolio.json',
         dataType: 'json'
     })
-        .done(function (response) {
+        .then(function (response) {
             let objectPortfolio = response;
             let keys = Object.keys(objectPortfolio);
             for (let i = 0; i < keys.length; i++) {
