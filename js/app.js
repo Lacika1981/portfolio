@@ -56,8 +56,7 @@ const portfolioCall = function(data) {
             let objectPortfolio = response;
             let keys = Object.keys(objectPortfolio);
             for (let i = 0; i < keys.length; i++) {
-                objectPortfolio[keys[i]].githubImage = "/images/mark-github.svg";
-                objectPortfolio[keys[i]].linkInsideImage = "../images/kebab-horizontal.svg";
+                objectPortfolio[keys[i]].githubImage = "../images/mark-github.svg";
             }
 
             let responseTitle = '<h5 class="modal-title" id="exampleModalLongTitle">%data%</h5>'.replace("%data%", response[data].title);
@@ -65,12 +64,9 @@ const portfolioCall = function(data) {
             let responseImage = '<img class="img-fluid" src="%data%">'.replace("%data%", response[data].image);
             let responseLink = response[data].linkGitHub;
             let responseGitHub = '<a href="' + responseLink + '" target="_blank"><img class="img-fluid" src="%data%"></a>'.replace("%data%", response[data].githubImage);
-            let responseLinkInside = response[data].linkInsidePage;
-            let responseLinkInsideImage = '<a href="' + responseLinkInside + '" target="_blank"><img class="img-fluid" src="%data%"></a>'.replace("%data%", response[data].linkInsideImage);
             $('.modal-header').empty().append(responseTitle);
             $('.modal-body').empty().append(responseBody).append(responseImage);
             $('.gitHubIcon').empty().append(responseGitHub);
-            $('.insideIcon').empty().append(responseLinkInsideImage);
         });
 }
 
