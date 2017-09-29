@@ -56,7 +56,7 @@ const portfolioCall = function(data) {
             let objectPortfolio = response;
             let keys = Object.keys(objectPortfolio);
             for (let i = 0; i < keys.length; i++) {
-                objectPortfolio[keys[i]].githubImage = "../images/mark-github.svg";
+                objectPortfolio[keys[i]].githubImage = "/images/mark-github.svg";
                 objectPortfolio[keys[i]].linkInsideImage = "../images/kebab-horizontal.svg";
             }
 
