@@ -96,12 +96,6 @@ $(document).on('click', 'button', function (elem) {
 });
 
 $(function(){
-    animatedDives();
-    animatedProgressBar();
-    shortenCardText();
-});
-
-$(function(){
     $('.menu img').click(function(){
         $(this).toggleClass('menuToggle');
         $('.navbar').toggleClass('navbarToggle');
@@ -113,4 +107,10 @@ $(function(){
     if (windowWidth <= 800){
         $('.timeline, .timeline-inverted').removeClass('animated');
     }
+});
+
+$(function(){
+    animatedDives();
+    animatedProgressBar();
+    shortenCardText();
 });
