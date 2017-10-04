@@ -10,7 +10,7 @@
         crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Raleway:300,400" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" rel="stylesheet">
-    <link href="css/styles.css" rel="stylesheet">
+    <link href="dist/styles.css" rel="stylesheet">
     <title>Laszlo Peter Varga Portfolio</title>
 </head>
 
@@ -46,14 +46,16 @@
                         </ul>
                     </nav>
                 </header>
-                <div class="overlay d-flex full-height flex-column justify-content-center align-items-center text-center">
-                    <div class="col">
+                <div class="overlay">
+                    <div class="col d-flex full-height flex-column justify-content-center align-items-center text-center">
                         <a href="https://github.com/Lacika1981/portfolio" target="_blank"><i class="fa fa-github fa-4x" aria-hidden="true"></i></a>
                         <h3>Features on this webpage</h3>
                         <p>HTML5, CSS3, Bootstrap v4, JavaScript, jQuery, Gulp</p>
+                        <a href="#about-me">
                         <button class="scrollDown">
-                                <i class="fa fa-arrow-down" aria-hidden="true"></i>
+                                <i class="fa fa-arrow-down fa-2x" aria-hidden="true"></i>
                         </button>
+                    </a>
                     </div>
                     
                 </div>
@@ -162,7 +164,7 @@
                             <div class="timeline-body">
                                 <blockquote class="blockquote">
                                     <p>This course will show you how to fully utilize everything that JavaScript has to offer.
-                                        You'll essentially go "under the hood" of this popular programming language, getting
+                                        You'llstyles essentially go "under the hood" of this popular programming language, getting
                                         to know how it works from the inside, so that you can make the most of it for every
                                         web development project.
                                     </p>
@@ -230,7 +232,7 @@
                         and works on mobile, tablet, and desktop browsers."
                     </p>
                     <div class="col text-center">
-                        <button type="button" id="test" class="btn btn-primary" data-toggle="modal" data-target="#buildPortfolio" data-jsonTarget="buildAPortfolio">
+                        <button type="button" id="test" class="btn btn-primary modalCall" data-toggle="modal" data-target="#buildPortfolio" data-jsonTarget="buildAPortfolio">
                                     More information
                                 </button>
                     </div>
@@ -255,7 +257,7 @@
                         dynamically modifies the DOM to display the information. Further customized the project by personalizing
                         the design using CSS.</p>
                     <div class="col text-center">
-                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#buildPortfolio" data-jsonTarget="resume">
+                        <button type="button" class="btn btn-primary modalCall" data-toggle="modal" data-target="#buildPortfolio" data-jsonTarget="resume">
                                 More information
                               </button>
                     </div>
@@ -278,7 +280,7 @@
                     <h4 class="card-title">Project - Classic Arcade Game Clone</h4>
                     <p class="card-text">An HTML5 Canvas powered video game, developed using the best practices in Object Oriented JavaScript.</p>
                     <div class="col text-center">
-                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#buildPortfolio" data-jsonTarget="arcadeGame">
+                        <button type="button" class="btn btn-primary modalCall" data-toggle="modal" data-target="#buildPortfolio" data-jsonTarget="arcadeGame">
                                 More information
                               </button>
                     </div>
@@ -304,7 +306,7 @@
                     <p class="card-text">Optimized an inefficient web application's JavaScript, CSS and assets delivery, ensuring it runs at 60fps
                         and achieves a PageSpeed score of at least 90.</p>
                     <div class="col text-center">
-                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#buildPortfolio" data-jsonTarget="websiteOptimization">
+                        <button type="button" class="btn btn-primary modalCall" data-toggle="modal" data-target="#buildPortfolio" data-jsonTarget="websiteOptimization">
                                     More information
                                   </button>
                     </div>
@@ -329,7 +331,7 @@
                         and various points of interest. Users can search all included landmarks and, when selected, additional
                         information about a landmark is presented from the FourSquare and Wikipedia APIs.</p>
                     <div class="col text-center">
-                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#buildPortfolio" data-jsonTarget="neighborhood">
+                        <button type="button" class="btn btn-primary modalCall" data-toggle="modal" data-target="#buildPortfolio" data-jsonTarget="neighborhood">
                                         More information
                                       </button>
                     </div>
@@ -353,7 +355,7 @@
                     <p class="card-text">Wrote comprehensive unit tests, using the Jasmine testing framework, for an RSS Feed Reader application
                         that uses Google's RSS API.</p>
                     <div class="col text-center">
-                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#buildPortfolio" data-jsonTarget="feedReader">
+                        <button type="button" class="btn btn-primary modalCall" data-toggle="modal" data-target="#buildPortfolio" data-jsonTarget="feedReader">
                                         More information <i class="fa fa-arrow-right" aria-hidden="true"></i>
                                       </button>
                     </div>
