@@ -1,6 +1,6 @@
-const animatedProgressBar = function (){
+var animatedProgressBar = function (){
     $(".progress div").each(function () {
-        let display = $(this),
+        var display = $(this),
             nextValue = $(this).attr("aria-valuenow");
         $(display)
             .animate({
@@ -15,23 +15,23 @@ const animatedProgressBar = function (){
 /* https://www.sitepoint.com/scroll-based-animations-jquery-css3/ */
 
 
-const animatedDives = function (){
-    let $animatedElement = $('li.animated');
-    let $window = $(window);
+var animatedDives = function (){
+    var $animatedElement = $('li.animated');
+    var $window = $(window);
 
     $window.on('scroll resize', checkInView);
     $window.trigger('scroll');
 
     function checkInView() {
-        let window_height = $window.height();
-        let window_top_position = $window.scrollTop();
-        let window_bottom_position = (window_top_position + window_height);
+        var window_height = $window.height();
+        var window_top_position = $window.scrollTop();
+        var window_bottom_position = (window_top_position + window_height);
 
         $.each($animatedElement, function () {
-            let $element = $(this);
-            let element_height = $element.outerHeight();
-            let element_top_position = $element.offset().top;
-            let element_bottom_position = (element_top_position + element_height);
+            var $element = $(this);
+            var element_height = $element.outerHeight();
+            var element_top_position = $element.offset().top;
+            var element_bottom_position = (element_top_position + element_height);
 
             //check to see if this current container is within viewport
             if ((element_bottom_position >= window_top_position) &&
@@ -47,40 +47,40 @@ const animatedDives = function (){
     }
 }
 
-const portfolioCall = function(data) {
+var portfolioCall = function(data) {
     $.ajax({
         url: 'js/portfolio.json',
         dataType: 'json'
     })
         .done(function (response) {
-            let objectPortfolio = response;
-            let keys = Object.keys(objectPortfolio);
-            for (let i = 0; i < keys.length; i++) {
+            var objectPortfolio = response;
+            var keys = Object.keys(objectPortfolio);
+            for (var i = 0; i < keys.length; i++) {
                 objectPortfolio[keys[i]].githubImage = "../images/mark-github.svg";
             }
 
-            let responseTitle = '<h5 class="modal-title" id="exampleModalLongTitle">%data%</h5>'.replace("%data%", response[data].title);
-            let responseBody = '<p class="card-text">%data%</p>'.replace("%data%", response[data].body);
-            let responseImage = '<img class="img-fluid" src="%data%">'.replace("%data%", response[data].image);
-            let responseLink = response[data].linkGitHub;
-            let responseGitHub = '<a href="' + responseLink + '" target="_blank"><img class="img-fluid" src="%data%"></a>'.replace("%data%", response[data].githubImage);
+            var responseTitle = '<h5 class="modal-title" id="exampleModalLongTitle">%data%</h5>'.replace("%data%", response[data].title);
+            var responseBody = '<p class="card-text">%data%</p>'.replace("%data%", response[data].body);
+            var responseImage = '<img class="img-fluid" src="%data%">'.replace("%data%", response[data].image);
+            var responseLink = response[data].linkGitHub;
+            var responseGitHub = '<a href="' + responseLink + '" target="_blank"><img class="img-fluid" src="%data%"></a>'.replace("%data%", response[data].githubImage);
             $('.modal-header').empty().append(responseTitle);
             $('.modal-body').empty().append(responseBody).append(responseImage);
             $('.gitHubIcon').empty().append(responseGitHub);
         });
 }
 
-const shortenCardText = function(){
+var shortenCardText = function(){
     $('p.card-text').each(function(){ // take card text
-        let text = $(this)[0].innerText; // take value of card text
-        let textLength = text.length; // length of the text
-        let maxLength = 40; // max length
+        var text = $(this)[0].innerText; // take value of card text
+        var textLength = text.length; // length of the text
+        var maxLength = 40; // max length
 
         if (textLength > maxLength) { // checking max length
-            let a = text.charAt(maxLength); // what character at that position
+            var a = text.charAt(maxLength); // what character at that position
             if (a != ' '){ // check if it is a space
-                let space = text.indexOf(' ', maxLength); // check for space from the position of maxLength
-                let b = text.slice(0, space); // slice the text
+                var space = text.indexOf(' ', maxLength); // check for space from the position of maxLength
+                var b = text.slice(0, space); // slice the text
                 $(this).empty().append(b + ' ...'); // empty the container and append the text
             }
         }
@@ -90,8 +90,8 @@ const shortenCardText = function(){
 $('body').scrollspy({ target: '#navbar-example' });
 
 $(document).on('click', 'button', function (elem) {
-    let clickedElem = elem.target;
-    let clickedAttribute = clickedElem.getAttribute('data-jsonTarget');
+    var clickedElem = elem.target;
+    var clickedAttribute = clickedElem.getAttribute('data-jsonTarget');
     portfolioCall(clickedAttribute);
 });
 
@@ -103,7 +103,7 @@ $(function(){
 });
 
 $(function(){
-    let windowWidth = $(window).width();
+    var windowWidth = $(window).width();
     if (windowWidth <= 800){
         $('.timeline, .timeline-inverted').removeClass('animated');
     }

@@ -352,3 +352,57 @@ section .full-height-with-title h3 {
         margin: 0;
     }
 }
+
+.arrow {
+    position: relative;
+    width: 50px;
+    height: 100px;
+    margin: 0 auto;
+    -webkit-animation: mymove 5s infinite;
+    animation: mymove 1s infinite;
+}
+
+@-webkit-keyframes mymove {
+    from {top: 0px;}
+    to {top: 200px;}
+} 
+
+@keyframes mymove {
+    from {top: 0px;}
+    to {top: 50px;}
+}
+
+/* .overlay {
+    line-height: 40px;
+} */
+
+.overlay i.fa {
+    color: white;
+    opacity: 0.75;
+}
+
+.overlay i.fa:hover {
+    opacity: 1;
+}
+
+.overlay h3 {
+    color: white;
+    border-bottom: 1px solid white
+}
+
+.overlay p {
+    font-size: 2rem;
+    color: white;
+    font-family: sans-serif;
+}
+
+button.scrollDown {
+    position: relative;
+    width: 50px;
+    height: 100px;
+}
+
+.scrollDown i {
+    position: absolute;
+    top: 0;
+}
