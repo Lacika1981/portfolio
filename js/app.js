@@ -12,7 +12,7 @@ var animatedProgressBar = function (){
     });
 }
 
-/* https://www.sitepoint.com/scroll-based-animations-jquery-css3/ */
+// https://www.sitepoint.com/scroll-based-animations-jquery-css3/
 
 
 var animatedDives = function (){
@@ -67,6 +67,8 @@ var portfolioCall = function(data) {
             $('.modal-header').empty().append(responseTitle);
             $('.modal-body').empty().append(responseBody).append(responseImage);
             $('.gitHubIcon').empty().append(responseGitHub);
+        }).fail(function(){
+            alert('Could not fetch data from server. Please refresh your browser and try again!')
         });
 }
 
@@ -108,6 +110,8 @@ $(function(){
         $('.timeline, .timeline-inverted').removeClass('animated');
     }
 });
+
+// https://css-tricks.com/snippets/jquery/smooth-scrolling/
 
 $(function(){
     // Select all links with hashes
