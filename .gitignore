@@ -1,3 +1,6 @@
 node_modules/
 css/main.css
+css/animate.css
+dist/main.css
+dist/animate.css
 scss/
