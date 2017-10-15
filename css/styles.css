@@ -395,6 +395,14 @@ footer p {
     margin-bottom: 0;
 }
 
+a .fa {
+    color: black;
+}
+
+.liveViewNoDisplay {
+    display: none;
+}
+
 
 /* * {
     outline: 1px red solid;

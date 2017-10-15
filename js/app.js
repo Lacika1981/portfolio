@@ -1,5 +1,5 @@
-var animatedProgressBar = function (){
-    $(".progress div").each(function () {
+var animatedProgressBar = function() {
+    $(".progress div").each(function() {
         var display = $(this),
             nextValue = $(this).attr("aria-valuenow");
         $(display)
@@ -15,7 +15,7 @@ var animatedProgressBar = function (){
 // https://www.sitepoint.com/scroll-based-animations-jquery-css3/
 
 
-var animatedDives = function (){
+var animatedDives = function() {
     var $animatedElement = $('li.animated');
     var $window = $(window);
 
@@ -27,7 +27,7 @@ var animatedDives = function (){
         var window_top_position = $window.scrollTop();
         var window_bottom_position = (window_top_position + window_height);
 
-        $.each($animatedElement, function () {
+        $.each($animatedElement, function() {
             var $element = $(this);
             var element_height = $element.outerHeight();
             var element_top_position = $element.offset().top;
@@ -49,38 +49,46 @@ var animatedDives = function (){
 
 var portfolioCall = function(data) {
     $.ajax({
-        url: 'js/portfolio.json',
-        dataType: 'json'
-    })
-        .done(function (response) {
+            url: 'js/portfolio.json',
+            dataType: 'json'
+        })
+        .done(function(response) {
             var objectPortfolio = response;
             var keys = Object.keys(objectPortfolio);
             for (var i = 0; i < keys.length; i++) {
-                objectPortfolio[keys[i]].githubImage = "../images/mark-github.svg";
+                objectPortfolio[keys[i]].githubImage = '<i class="fa fa-github fa-2x" aria-hidden="true"></i>';
+                objectPortfolio[keys[i]].checkLive = '<i class="fa fa-eye fa-2x" aria-hidden="true"></i>';
             }
 
             var responseTitle = '<h5 class="modal-title" id="exampleModalLongTitle">%data%</h5>'.replace("%data%", response[data].title);
             var responseBody = '<p class="card-text">%data%</p>'.replace("%data%", response[data].body);
             var responseImage = '<img class="img-fluid" src="%data%">'.replace("%data%", response[data].image);
+            var responseLiveLink = response[data].linkLiveSite;
             var responseLink = response[data].linkGitHub;
-            var responseGitHub = '<a href="' + responseLink + '" target="_blank"><img class="img-fluid" src="%data%"></a>'.replace("%data%", response[data].githubImage);
+            var responseGitHub = '<a href="' + responseLink + '" target="_blank"><div>%data%</div>'.replace("%data%", response[data].githubImage);
+            var responseLive = '<a href="' + responseLiveLink + '" target="_blank"><div>%data%</div>'.replace("%data%", response[data].checkLive);
             $('.modal-header').empty().append(responseTitle);
             $('.modal-body').empty().append(responseBody).append(responseImage);
             $('.gitHubIcon').empty().append(responseGitHub);
-        }).fail(function(){
+            if (!responseLiveLink) {
+                $('.liveView').addClass('liveViewNoDisplay')
+            } else {
+                $('.liveView').removeClass('liveViewNoDisplay').empty().append(responseLive);
+            }
+        }).fail(function() {
             alert('Could not fetch data from server. Please refresh your browser and try again!')
         });
 }
 
-var shortenCardText = function(){
-    $('p.card-text').each(function(){ // take card text
+var shortenCardText = function() {
+    $('p.card-text').each(function() { // take card text
         var text = $(this)[0].innerText; // take value of card text
         var textLength = text.length; // length of the text
         var maxLength = 40; // max length
 
         if (textLength > maxLength) { // checking max length
             var a = text.charAt(maxLength); // what character at that position
-            if (a != ' '){ // check if it is a space
+            if (a != ' ') { // check if it is a space
                 var space = text.indexOf(' ', maxLength); // check for space from the position of maxLength
                 var b = text.slice(0, space); // slice the text
                 $(this).empty().append(b + ' ...'); // empty the container and append the text
@@ -91,68 +99,67 @@ var shortenCardText = function(){
 
 $('body').scrollspy({ target: '#navbar-example' });
 
-$(document).on('click', 'button.modalCall', function (elem) {
+$(document).on('click', 'button.modalCall', function(elem) {
     var clickedElem = elem.target;
     var clickedAttribute = clickedElem.getAttribute('data-jsonTarget');
     portfolioCall(clickedAttribute);
 });
 
-$(function(){
-    $('.menu img').click(function(){
+$(function() {
+    $('.menu img').click(function() {
         $(this).toggleClass('menuToggle');
         $('.navbar').toggleClass('navbarToggle');
     });
 });
 
-$(function(){
+$(function() {
     var windowWidth = $(window).width();
-    if (windowWidth <= 800){
+    if (windowWidth <= 800) {
         $('.timeline, .timeline-inverted').removeClass('animated');
     }
 });
 
 // https://css-tricks.com/snippets/jquery/smooth-scrolling/
 
-$(function(){
+$(function() {
     // Select all links with hashes
-$('a[href*="#"]')
-// Remove links that don't actually link to anything
-.not('[href="#"]')
-.not('[href="#0"]')
-.click(function(event) {
-  // On-page links
-  if (
-    location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') 
-    && 
-    location.hostname == this.hostname
-  ) {
-    // Figure out element to scroll to
-    var target = $(this.hash);
-    target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-    // Does a scroll target exist?
-    if (target.length) {
-      // Only prevent default if animation is actually gonna happen
-      event.preventDefault();
-      $('html, body').animate({
-        scrollTop: target.offset().top
-      }, 1000, function() {
-        // Callback after animation
-        // Must change focus!
-        var $target = $(target);
-        $target.focus();
-        if ($target.is(":focus")) { // Checking if the target was focused
-          return false;
-        } else {
-          $target.attr('tabindex','-1'); // Adding tabindex for elements not focusable
-          $target.focus(); // Set focus again
-        };
-      });
-    }
-  }
-});
+    $('a[href*="#"]')
+        // Remove links that don't actually link to anything
+        .not('[href="#"]')
+        .not('[href="#0"]')
+        .click(function(event) {
+            // On-page links
+            if (
+                location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') &&
+                location.hostname == this.hostname
+            ) {
+                // Figure out element to scroll to
+                var target = $(this.hash);
+                target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+                // Does a scroll target exist?
+                if (target.length) {
+                    // Only prevent default if animation is actually gonna happen
+                    event.preventDefault();
+                    $('html, body').animate({
+                        scrollTop: target.offset().top
+                    }, 1000, function() {
+                        // Callback after animation
+                        // Must change focus!
+                        var $target = $(target);
+                        $target.focus();
+                        if ($target.is(":focus")) { // Checking if the target was focused
+                            return false;
+                        } else {
+                            $target.attr('tabindex', '-1'); // Adding tabindex for elements not focusable
+                            $target.focus(); // Set focus again
+                        };
+                    });
+                }
+            }
+        });
 })
 
-$(function(){
+$(function() {
     animatedDives();
     animatedProgressBar();
     shortenCardText();

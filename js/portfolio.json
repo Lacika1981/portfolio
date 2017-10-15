@@ -3,36 +3,48 @@
         "title": "Project - Build a Portfolio",
         "body": "Developed a personal portfolio page using HTML, CSS, and the Bootstrap framework. The page is fully responsive and works on mobile, tablet, and desktop browsers.",
         "image": "../images/optimized-images/portfolio-project-lg.jpg",
-        "linkGitHub": "https://github.com/Lacika1981/project-1"
+        "linkGitHub": "https://github.com/Lacika1981/project-1",
+        "linkLiveSite": "http://lpvwebdesign.co.uk/myworks/buildAPortfolio/"
     },
     "resume": {
         "title": "Project - Online Resume",
         "body": "Using jQuery, developed an interactive resume application that reads all data from a JSON file and then dynamically modifies the DOM to display the information. Further customized the project by personalizing the design using CSS.",
         "image": "../images/optimized-images/resume-project-lg.jpg",
-        "linkGitHub": "https://github.com/Lacika1981/Project-Resume"
+        "linkGitHub": "https://github.com/Lacika1981/Project-Resume",
+        "linkLiveSite": "http://lpvwebdesign.co.uk/myworks/project-resume/"
     },
     "arcadeGame": {
         "title": "Project - Classic Arcade Game Clone",
         "body": "An HTML5 Canvas powered video game, developed using the best practices in Object Oriented JavaScript.",
         "image": "../images/optimized-images/arcade-game-lg.jpg",
-        "linkGitHub": "https://github.com/Lacika1981/frontend-nanodegree-arcade-game"
+        "linkGitHub": "https://github.com/Lacika1981/frontend-nanodegree-arcade-game",
+        "linkLiveSite": "http://lpvwebdesign.co.uk/myworks/arcade-game/"
     },
-    "websiteOptimization" : {
+    "websiteOptimization": {
         "title": "Project - Website Optimization",
         "body": "Optimized an inefficient web application's JavaScript, CSS and assets delivery, ensuring it runs at 60fps and achieves a PageSpeed score of at least 90.",
         "image": "../images/optimized-images/website-optimization-lg.jpg",
         "linkGitHub": "https://github.com/Lacika1981/frontend-nanodegree-mobile-portfolio"
     },
-    "neighborhood" : {
+    "neighborhood": {
         "title": "Project - Neighborhood Map",
         "body": "A single-page web application, built using the Knockout framework, that displays a Google Map of an area and various points of interest. Users can search all included landmarks and, when selected, additional information about a landmark is presented from the FourSquare and Wikipedia APIs.",
         "image": "../images/optimized-images/neighborhood-project-lg.jpg",
-        "linkGitHub": "https://github.com/Lacika1981/neighborhood-map-project"
+        "linkGitHub": "https://github.com/Lacika1981/neighborhood-map-project",
+        "linkLiveSite": "http://lpvwebdesign.co.uk/myworks/neighborhood-map/"
     },
-    "feedReader" : {
+    "feedReader": {
         "title": "Project - Feed Reader Testing",
         "body": "Wrote comprehensive unit tests, using the Jasmine testing framework, for an RSS Feed Reader application that uses Google's RSS API.",
         "image": "../images/optimized-images/feed-reader-lg.jpg",
-        "linkGitHub": "https://github.com/Lacika1981/frontend-nanodegree-feedreader"
+        "linkGitHub": "https://github.com/Lacika1981/frontend-nanodegree-feedreader",
+        "linkLiveSite": "http://lpvwebdesign.co.uk/myworks/feedReader/"
+    },
+    "last40-mockup": {
+        "title": "Website - LAST40 mockup",
+        "body": "Using HTML5, CSS3 and Bootstrap to make this website from a PDF file",
+        "image": "../images/optimized-images/last40-mockup-lg.jpg",
+        "linkGitHub": "https://github.com/Lacika1981/mockup-website",
+        "linkLiveSite": "http://lpvwebdesign.co.uk/myworks/last40/"
     }
 }
